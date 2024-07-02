@@ -5,8 +5,11 @@ import images from "./components/Images";
 import Calendario from "./components/Calendario";
 import Footer from "./components/Footer";
 import EnlaceRegistro from "./components/EnlaceRegistro";
-import Button from "./components/custom/Button";
-import textos from "./api/textos";
+import Button from "./components/custom/CronogramaDatos";
+import CronogramaDatos from "./components/custom/CronogramaDatos";
+import textos from "./api/calendarioDatos";
+import cronograma from "./api/calendarioDatos";
+import Contactanos from "./components/custom/Contactanos";
 
 
 const App = () => {
@@ -96,83 +99,20 @@ const App = () => {
             tecnología de la belleza.
           </p>
         </section>
-        <div>
-        <section>
-        {
-          textos.map( ( texto, indice ) => <Button key={indice} texto={texto.texto} /> )
-        }
-      </section>
-        </div>
-        <Calendario />
+
         <div className="grid lg:grid-cols-3 text-white [&>*]:p-7">
-          <div className="bg-[#053252] [&>*]:pb-3">
-            <h4 className="text-lg font-bold text-white">Contactanos:</h4>
-            <p>
-              Para cualquier pregunta relacionada con las regulaciones, consulte
-              las preguntas frecuentes en línea en la plataforma
-              <a
-                href="www.forwomeninscience.com"
-                target="_blank"
-                className="block font-bold pt-3"
-              >
-                www.forwomeninscience.com
-              </a>
-              <a
-                href="mailto:info@forwomeninscience.com"
-                target="_blank"
-                className="block font-bold py-0"
-              >
-                info@forwomeninscience.com
-              </a>
-              <a
-                href="premilorealunesco@senacyt.gob.pa"
-                target="_blank"
-                className="block font-bold py-0"
-              >
-                premilorealunesco@senacyt.gob.pa
-              </a>
-            </p>
-          </div>
+          <Contactanos />
           <div className="bg-[#33556E] lg:col-span-2">
             <h4 className="text-xl font-extrabold text-white">
               Calendario 2024:
             </h4>
             <div>
+              <table className="table-auto divide-y divide-gray-200 text-lg leading-5">
+                {
+                  cronograma.map( ( texto, indice ) => <CronogramaDatos key={indice} texto={texto.texto} fecha={texto.fecha} /> )
+                }
+              </table>
             </div>
-            <table className="table-auto divide-y divide-gray-200 text-lg leading-5">
-              <tr>
-                <td className="py-3 pr-7">APERTURA DE LA CONVOCATORIA</td>
-                <td className="font-bold">05 DE JULIO</td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-7">CIERRE DE LA CONVOCATORIA</td>
-                <td className="font-bold py-3">
-                  15 DE AGOSTO (13:00 HORA BOGOTÁ, QUITO, LIMA, PANAMÁ)
-                </td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-7">REVISIÓN DE REQUISITOS</td>
-                <td className="font-bold py-3">15 DE AGOSTO AL 30 DE AGOSTO</td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-7">EVALUACIÓN DE APLICACIONES</td>
-                <td className="font-bold py-3">
-                  DEL 30 DE AGOSTO AL 15 DE OCTUBRE
-                </td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-7">SELECCIÓN FINAL POR EL JURADO</td>
-                <td className="font-bold py-3">
-                  15 DE OCTUBRE AL 30 DE OCTUBRE
-                </td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-7">CEREMONIA DE PREMIACIÓN</td>
-                <td className="font-bold py-3">
-                  26 DE NOVIEMBRE (EN LIMA PERÚ)
-                </td>
-              </tr>
-            </table>
           </div>
         </div>
         <EnlaceRegistro />
