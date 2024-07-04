@@ -21,14 +21,30 @@ const EnlaceRegistro = () => {
     </div>
     <div className="flex items-center">
       <p>
+      <a href="https://www.unsa.edu.pe/wp-content/uploads/2022/11/Gua-para-registro-de-la-propuesta-Premio-Nacional-LOral-UNESCO-2023-VF.pdf" target='_blank'>
         <img
           src={images.iconPDF}
           alt="for Women In Science"
           className="w-[50px]"
         />
+        </a>
       </p>
       <p className="pl-4 text-balance md:w-[200px] leading-5">
-        Guía para el registro y la postulación en la plataforma
+        <a href="https://www.unsa.edu.pe/wp-content/uploads/2022/11/Gua-para-registro-de-la-propuesta-Premio-Nacional-LOral-UNESCO-2023-VF.pdf" target='_blank'>Guía para el registro y la postulación en la plataforma</a>
+      </p>
+    </div>
+    <div className="flex items-center">
+      <p>
+      <a href="https://www.unsa.edu.pe/wp-content/uploads/2022/11/Gua-para-registro-de-la-propuesta-Premio-Nacional-LOral-UNESCO-2023-VF.pdf" target='_blank'>
+        <img
+          src={images.iconPDF}
+          alt="for Women In Science"
+          className="w-[50px]"
+        />
+        </a>
+      </p>
+      <p className="pl-4 text-balance md:w-[150px] leading-5">
+        <a href="https://www.unsa.edu.pe/wp-content/uploads/2022/11/REGLAS-Y-REGULACIONES-CERAN-fwis.pdf" target='_blank'>Bases del Concurso 2024</a>
       </p>
     </div>
   </section>

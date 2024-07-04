@@ -8,7 +8,7 @@ const index = () => {
         Para cualquier pregunta relacionada con las regulaciones, consulte
         las preguntas frecuentes en línea en la plataforma
         <a
-          href="www.forwomeninscience.com"
+          href="https://www.forwomeninscience.com/"
           target="_blank"
           className="block font-bold pt-3"
         >
@@ -22,7 +22,7 @@ const index = () => {
           info@forwomeninscience.com
         </a>
         <a
-          href="premilorealunesco@senacyt.gob.pa"
+          href="mailto:premilorealunesco@senacyt.gob.pa"
           target="_blank"
           className="block font-bold py-0"
         >
